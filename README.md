@@ -3,4 +3,4 @@ The script can also compare two individual genomes or 1 genome vs a group of gen
 
 It is recommended that each "annotated_variants.tab" file is stored in a directory named after the genome.
 
-Affiliations: Institute of Hygiene and Medical Microbiology, Medical University of Innsbruck
+Affiliations: Institute of Hygiene and Medical Microbiology, Medical University of Innsbruck (https://www.i-med.ac.at/hygiene/)
