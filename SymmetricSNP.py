@@ -1,14 +1,10 @@
 import pandas as pd
-import re
-import csv
 import os
-import sys
-from collections import Counter
-import collections
-import numpy as np
+
 
 path1 = input("Provide the path to the first group of annotated variants:")
 path2 = input("Provide the path to the second group of annotated variants:")
+save_matrix = input("Do you with to save the matrix? (y/n):")
 
 dir_list1 = os.listdir(path1)
 dir_list2 = os.listdir(path2)
@@ -18,7 +14,7 @@ def import_command(dir_list, path):
     for item in dir_list:
         if item in dir_list:
             try:
-                cp = pd.read_csv(path + item + "/annotated_variants.tab", delimiter="\t")
+                cp = pd.read_csv(path + "/" + item + "/annotated_variants.tab", delimiter="\t")
                 cp = cp[cp['is_snp'] == True]
                 set_dict[item] = set(cp['#Uploaded_variation'])
             except Exception:
@@ -37,6 +33,11 @@ for key1, value1 in set_dict1.items():
 
 df = pd.json_normalize([{'index': k, **v} for k, v in dict1.items()])
 df = df.set_index('index')
+if save_matrix == "y":
+    save_location = input("Where do you want to save the matrix?:")
+    df.to_csv(save_location + "/matrix.csv")
+else:
+    print("Matrix was not saved")
 print("The minimum symmetric SNP-difference is: " + str(df.min().min()))
 print("The rounded mean symmetric SNP-difference is: " + str(round(df.mean().mean(), 0)))
 print("The maximum symmetric SNP-difference is: " + str(df.max().max()))
