@@ -1,6 +1,6 @@
 There are 3 versions of the script, a .py command line version, an .ipynb script that can be executed in Jupyter and a .py GUI script that needs to be started in the command line and then provides a simple graphic interface. The GUI version currently has scaling issues on 4k monitors.
 
-The scripts can calculate the symmetric SNP differences between two groups of genomes. The output consists of the minimum, mean and maximum as well as a dataframe of all pairwise symmetric SNP differences. The required input file "annotated_variants.tab" can be generated using the perSVade pipeline (https://github.com/Gabaldonlab/perSVade).
+The scripts can calculate the symmetric SNP differences between two groups of genomes. The output consists of the minimum, mean and maximum as well as a matrix of all pairwise symmetric SNP differences. The required input file "annotated_variants.tab" can be generated using the perSVade pipeline (https://github.com/Gabaldonlab/perSVade).
 
 It is recommended that each "annotated_variants.tab" file is stored in a directory named after the genome.
 
