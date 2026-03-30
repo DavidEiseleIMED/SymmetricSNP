@@ -5,4 +5,5 @@ The scripts can calculate the symmetric SNP differences between two groups of ge
 It is recommended that each "annotated_variants.tab" file is stored in a directory named after the genome.
 
 When using the software, please cite: https://www.frontiersin.org/journals/cellular-and-infection-microbiology/articles/10.3389/fcimb.2026.1771561/full
+
 Affiliations: Institute of Hygiene and Medical Microbiology, Medical University of Innsbruck (https://www.i-med.ac.at/hygiene/)
